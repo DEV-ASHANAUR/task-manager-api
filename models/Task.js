@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema.Types;
 const TaskSchema = new mongoose.Schema({
-    name: {
+    taskName: {
         type: String,
-        required: [true, "name field is required"],
-        unique: true,
+        required: [true, "name field is required"]
     },
     description: {
         type: String,

@@ -4,7 +4,7 @@ const TaskListSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, "name field is required"],
-        unique: true,
+        unique:true,
     },
     description: {
         type: String,

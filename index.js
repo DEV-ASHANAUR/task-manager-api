@@ -10,6 +10,7 @@ app.use(express.json());
 
 const taskListRoute = require("./routes/taskList.route");
 const taskRoute = require("./routes/task.route");
+const getTaskRoute = require("./routes/gettask.route");
 
 // database connection
 const connect = async () => {
@@ -31,6 +32,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/createtasklist", taskListRoute);
 app.use("/api/createtask", taskRoute);
+app.use("/api/tasklist",getTaskRoute);
+
 
 //Global Error Handlaer
 app.use((err, req, res, next) => {
